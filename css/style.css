@@ -1,0 +1,161 @@
+
+nav {
+    display: flex !important;
+    justify-content: space-between;
+    padding: 0 16px !important;
+    margin-top: 10px !important;
+}
+
+nav .nav_container {
+    display: flex;    
+    gap: 20px;
+    align-items: center;
+}
+
+nav .nav_container .nav_menu{
+    font-size: 24px;
+    cursor: pointer;
+    color: #555555;
+}
+
+nav .nav_container .nav_logo{  
+  cursor: pointer;
+}
+
+nav .nav_container .nav_logo .logo_text{  
+    font-size: 24px;
+    letter-spacing: -1px;
+    padding: 18px 14px 18px 0px;
+    
+}
+
+nav .nav_container .nav_logo .fa-brands.fa-youtube{
+    color: #f00;
+    font-size: 24px;       
+}
+
+nav .nav_container .nav_logo #country-code{
+  color: #606060;
+  width: 10px;
+  height: 44px;
+  font-size: 10px;
+  margin: 12px 0 0 -10px;
+}
+
+nav .nav_container .fa-solid.fa-microphone{
+    width: 30px;
+    height: 30px;    
+    padding: 4px;
+    border: 1px solid #c6c6c6;
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    cursor: pointer; 
+}
+nav .nav_container .nav_setting{          
+    width:40px;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer; 
+}
+
+nav .nav_container .nav_setting .fa-solid.fa-ellipsis-vertical{   
+  font-size: 20px;
+  text-align: center;
+  vertical-align: middle;
+  
+}
+
+
+
+nav .nav_container .nav_account .fa-regular.fa-circle-user{
+  font-size: 20px;
+  justify-content: center;  
+}
+
+nav .nav_container .nav_account{
+    font-size: 17px;
+    line-height: 36px;
+    border: 1px solid #c6c6c6;
+    border-radius: 18px;
+    padding: 0px 13px;
+    height: 36px;
+    color: #065fd4; 
+    font-weight: 500;
+    cursor: pointer;
+    margin: 0px;
+    position: relative;
+    justify-content: center;
+}
+
+.search {
+    width: 634px;
+    height: 40px;
+    margin: 0 auto;
+    color: white;
+    display: flex;
+  }
+  .search__inner {
+    flex-grow: 1;
+    position: relative;
+  }
+  .search__inner input {
+    width: 100%;
+    height: 100%;
+    padding: 0px 4px 0px 16px;
+    margin-left: 32px;
+    outline: none;
+    border: 1px solid #d3d3d3;
+    border-radius: 40px 0 0 40px;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    background-color: white;
+  }
+  .search__inner input:focus {
+    border-color: #476fb6;
+    outline-offset: 0px;
+  }
+  .search__inner .actions {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding-right: 6px;
+    display: flex;
+  }
+  .search__inner .actions .material-icons {
+    width: 28px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+    color: #7e7e7e;
+  }
+  .search__inner .actions .material-icons:hover {
+    color: rgb(18, 18, 18);
+  }
+  .search .search-btn {
+    width: 64px;
+    height: 40px;
+    border-radius: 0 20px 20px 0;
+    background-color: #b6b6b6;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .search .search-btn:hover::after {
+    content: "검색";
+    position: absolute;
+    top: calc(100% + 20px);
+    padding: 8px 12px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #000000;
+  }
