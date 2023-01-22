@@ -1,40 +1,50 @@
 
-nav {
+nav#top-bar {
     display: flex !important;
     justify-content: space-between;
     padding: 0 16px !important;
     margin-top: 10px !important;
 }
 
-nav .nav_container {
+nav#top-bar .nav_container {
     display: flex;    
-    gap: 20px;
+    gap: 10px;
     align-items: center;
 }
 
-nav .nav_container .nav_menu{
-    font-size: 24px;
-    cursor: pointer;
+nav#top-bar .nav_container .nav_menu{
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 8px;
+    text-align: center;
     color: #555555;
 }
 
-nav .nav_container .nav_logo{  
+.nav_menu:hover{
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+}
+
+nav#top-bar .nav_container .nav_logo{  
   cursor: pointer;
 }
 
-nav .nav_container .nav_logo .logo_text{  
+nav#top-bar .nav_container .nav_logo .logo_text{  
     font-size: 24px;
     letter-spacing: -1px;
-    padding: 18px 14px 18px 0px;
+    padding: 18px 14px 0px 0px;
     
 }
 
-nav .nav_container .nav_logo .fa-brands.fa-youtube{
+nav#top-bar .nav_container .nav_logo .fa-brands.fa-youtube{
     color: #f00;
     font-size: 24px;       
 }
 
-nav .nav_container .nav_logo #country-code{
+nav#top-bar .nav_container .nav_logo #country-code{
   color: #606060;
   width: 10px;
   height: 44px;
@@ -42,7 +52,7 @@ nav .nav_container .nav_logo #country-code{
   margin: 12px 0 0 -10px;
 }
 
-nav .nav_container .fa-solid.fa-microphone{
+nav#top-bar .nav_container .fa-solid.fa-microphone{
     width: 30px;
     height: 30px;    
     padding: 4px;
@@ -53,29 +63,28 @@ nav .nav_container .fa-solid.fa-microphone{
     align-items: center;   
     cursor: pointer; 
 }
-nav .nav_container .nav_setting{          
+nav#top-bar .nav_container .nav_setting{          
     width:40px;
     height:40px;
-    line-height: 40px;
+    box-sizing: border-box;
+    padding: 8px;
     text-align: center;
     cursor: pointer; 
 }
 
-nav .nav_container .nav_setting .fa-solid.fa-ellipsis-vertical{   
+nav#top-bar .nav_container .nav_setting .fa-solid.fa-ellipsis-vertical{   
   font-size: 20px;
   text-align: center;
   vertical-align: middle;
   
 }
 
-
-
-nav .nav_container .nav_account .fa-regular.fa-circle-user{
+nav#top-bar .nav_container .nav_account .fa-regular.fa-circle-user{
   font-size: 20px;
   justify-content: center;  
 }
 
-nav .nav_container .nav_account{
+nav#top-bar .nav_container .nav_account{
     font-size: 17px;
     line-height: 36px;
     border: 1px solid #c6c6c6;
@@ -97,11 +106,11 @@ nav .nav_container .nav_account{
     color: white;
     display: flex;
   }
-  .search__inner {
+.search__inner {
     flex-grow: 1;
     position: relative;
   }
-  .search__inner input {
+.search__inner input {
     width: 100%;
     height: 100%;
     padding: 0px 4px 0px 16px;
@@ -114,11 +123,11 @@ nav .nav_container .nav_account{
     font-size: 16px;
     background-color: white;
   }
-  .search__inner input:focus {
+.search__inner input:focus {
     border-color: #476fb6;
     outline-offset: 0px;
   }
-  .search__inner .actions {
+.search__inner .actions {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -126,7 +135,7 @@ nav .nav_container .nav_account{
     padding-right: 6px;
     display: flex;
   }
-  .search__inner .actions .material-icons {
+.search__inner .actions .material-symbols-outlined {
     width: 28px;
     height: 100%;
     display: flex;
@@ -134,23 +143,32 @@ nav .nav_container .nav_account{
     align-items: center;
     cursor: pointer;
     font-size: 20px;
-    color: #7e7e7e;
+    color: #000000;
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
   }
-  .search__inner .actions .material-icons:hover {
+.search__inner .actions .material-symbols-outlined:hover {
     color: rgb(18, 18, 18);
   }
-  .search .search-btn {
+
+#search{
     width: 64px;
     height: 40px;
-    border-radius: 0 20px 20px 0;
-    background-color: #b6b6b6;
+    box-sizing: border-box;
+    border:1px solid #d3d3d3;
+    border-radius: 0 40px 40px 0;
+    background-color: #f5f5f5;
+    color: rgb(35, 35, 35);
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-  }
-  .search .search-btn:hover::after {
+}
+#search:hover::after {
     content: "검색";
     position: absolute;
     top: calc(100% + 20px);
@@ -159,3 +177,64 @@ nav .nav_container .nav_account{
     font-size: 14px;
     background-color: #000000;
   }
+
+.sidebar {
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 50px;
+    min-height: 100%;
+    bottom: 0;
+    width: 72px;
+    padding:0 4px;
+    /* margin-top: 4px; */
+    display: inline-block;
+    flex-direction: column;
+}
+
+.sidebar-menu{
+  margin-top: 10px;
+}
+
+.sidebar-button{
+    width: 64px;
+    height: 74px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;    
+}
+
+.sidebar-button:hover{
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+}
+  
+.sidebar-button-a{  
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column; 
+    
+}
+
+.material-symbols-outlined{
+     line-height: 24px;
+     text-align: center;
+     width: 24px;
+     height: 24px;
+     font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+  
+.sidebar-text {
+    margin-top: 8px;
+    font-size: 10px;
+    font-family: Roboto, Arial, sans-serif;
+}
+
