@@ -18,36 +18,50 @@ nav#top-bar .nav_container .nav_menu{
     box-sizing: border-box;
     padding: 8px;
     text-align: center;
+    margin-top: -2px;
     color: #555555;
+    
 }
 
 .nav_menu:hover{
     cursor: pointer;
-    border: none;
     border-radius: 50%;
     background-color: #f0f0f0;
 }
 
 nav#top-bar .nav_container .nav_logo{  
   cursor: pointer;
+  position: relative;
+  width: 110px;
+  height: 40px;
+}
+
+nav#top-bar .nav_container .nav_logo .fa-brands.fa-youtube{
+    color: #f00;  
+    font-size: 26px;
+    position: absolute;
+    bottom: 8px;
+    left: 5px;
 }
 
 nav#top-bar .nav_container .nav_logo .logo_text{  
     font-size: 24px;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
     padding: 18px 14px 0px 0px;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-weight:bold;
+    position: absolute;
+    left: 37px;
+    bottom: 10px;
     
-}
-
-nav#top-bar .nav_container .nav_logo .fa-brands.fa-youtube{
-    color: #f00;
-    font-size: 24px;       
 }
 
 nav#top-bar .nav_container .nav_logo #country-code{
   color: #606060;
+  position: absolute;
+  bottom: 27px;
+  left: 108px;
   width: 10px;
-  height: 44px;
   font-size: 10px;
   margin: 12px 0 0 -10px;
 }
@@ -56,13 +70,18 @@ nav#top-bar .nav_container .fa-solid.fa-microphone{
     width: 30px;
     height: 30px;    
     padding: 4px;
-    border: 1px solid #c6c6c6;
+    border: none;
     border-radius: 50%; 
     display: flex;
     justify-content: center;
     align-items: center;   
     cursor: pointer; 
+    background-color: #f9f9f9;
 }
+nav#top-bar .nav_container .fa-solid.fa-microphone:hover{
+    background-color: #e9e9e9;
+}
+
 nav#top-bar .nav_container .nav_setting{          
     width:40px;
     height:40px;
@@ -79,24 +98,32 @@ nav#top-bar .nav_container .nav_setting .fa-solid.fa-ellipsis-vertical{
   
 }
 
-nav#top-bar .nav_container .nav_account .fa-regular.fa-circle-user{
-  font-size: 20px;
-  justify-content: center;  
-}
-
 nav#top-bar .nav_container .nav_account{
-    font-size: 17px;
-    line-height: 36px;
-    border: 1px solid #c6c6c6;
+    display: flex;
+    box-sizing: border-box;
+    border: 1px solid #d6d6d6;
     border-radius: 18px;
     padding: 0px 13px;
     height: 36px;
-    color: #065fd4; 
-    font-weight: 500;
+    color: #065fd4;
     cursor: pointer;
     margin: 0px;
     position: relative;
     justify-content: center;
+    align-items: center;
+}
+.fa-regular.fa-circle-user{
+  font-size: 20px;
+}
+
+.login{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav_account:hover{
+    background-color: #def1ff;
+    border-color: #fcfcfc;
 }
 
 .search {
@@ -105,19 +132,22 @@ nav#top-bar .nav_container .nav_account{
     margin: 0 auto;
     color: white;
     display: flex;
+    flex-direction: row;
   }
 .search__inner {
     flex-grow: 1;
     position: relative;
   }
 .search__inner input {
+    box-shadow: inset 0 1px 2px #eee;
     width: 100%;
     height: 100%;
     padding: 0px 4px 0px 16px;
-    margin-left: 32px;
+    /* margin-left: 32px; */
     outline: none;
     border: 1px solid #d3d3d3;
     border-radius: 40px 0 0 40px;
+    border-right-color: #eee;
     box-sizing: border-box;
     color: rgb(0, 0, 0);
     font-size: 16px;
@@ -143,7 +173,7 @@ nav#top-bar .nav_container .nav_account{
     align-items: center;
     cursor: pointer;
     font-size: 20px;
-    color: #000000;
+    color: #0000009c;
     font-variation-settings:
     'FILL' 1,
     'wght' 400,
@@ -151,7 +181,7 @@ nav#top-bar .nav_container .nav_account{
     'opsz' 48
   }
 .search__inner .actions .material-symbols-outlined:hover {
-    color: rgb(18, 18, 18);
+    color: rgb(0, 0, 0);
   }
 
 #search{
@@ -160,22 +190,35 @@ nav#top-bar .nav_container .nav_account{
     box-sizing: border-box;
     border:1px solid #d3d3d3;
     border-radius: 0 40px 40px 0;
-    background-color: #f5f5f5;
+    background-color: #f8f8f8;
     color: rgb(35, 35, 35);
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 350,
+    'GRAD' 0,
+    'opsz' 48
 }
+
+#search:hover{
+    background-color: #f2f2f2;
+    box-shadow: 0 1px 0px #d3d3d3;
+}
+
 #search:hover::after {
     content: "검색";
+    color:#ffffff;
     position: absolute;
     top: calc(100% + 20px);
-    padding: 8px 12px 12px;
+    padding: 11px 8px;
+    text-align: center;
     border-radius: 4px;
-    font-size: 14px;
-    background-color: #000000;
+    font-size: 12px;
+    background-color: #00000090;
   }
 
 .sidebar {
@@ -220,14 +263,14 @@ nav#top-bar .nav_container .nav_account{
     
 }
 
-.material-symbols-outlined{
+.sidebar .material-symbols-outlined{
      line-height: 24px;
      text-align: center;
      width: 24px;
      height: 24px;
      font-variation-settings:
     'FILL' 0,
-    'wght' 400,
+    'wght' 300,
     'GRAD' 0,
     'opsz' 48
 }
@@ -238,3 +281,47 @@ nav#top-bar .nav_container .nav_account{
     font-family: Roboto, Arial, sans-serif;
 }
 
+.contents-page{
+     width: 100%;
+     margin-left: 72px;
+}
+
+.contents-top-bar{
+     border-top:none;
+     border-bottom: none;
+     position: fixed;
+     top: 56px;
+     width: 100%;
+     height: 56px;
+     z-index: 2000;
+     display: flex;
+     justify-content: flex-start;
+     flex: none;
+} 
+
+.bar-button{
+     margin: 12px 12px 12px 0px;
+     padding: 0 12px;
+     height: 32px;
+     border-radius: 8px;
+     background-color: rgba(0, 0, 0, 0.05);
+     font-size: 14px;
+     font-weight: 400;
+     letter-spacing: 0.2px;
+     word-spacing: -1.5px;
+     cursor: pointer;
+     box-sizing: border-box;
+     justify-content: center;
+     align-items: center;
+     display: inline-flex; 
+}
+
+.bar-button:hover{
+     background-color: #d3d3d3;
+     color: #0f0f0f;
+     transition: background-color 0.5s cubic-bezier(0.05,0,0,1);
+}
+
+#all{
+     margin-left: 24px;
+}
