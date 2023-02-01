@@ -15,7 +15,7 @@ nav#top-bar {
     display: flex !important;
     justify-content: space-between;
     padding: 0 16px !important;
-    margin-top: 10px !important;
+    height: 56px;
 }
 
 nav#top-bar .nav_container {
@@ -233,23 +233,22 @@ nav#top-bar .nav_container .nav_account{
     background-color: #00000090;
   }
 
+#sidebar {
+    display: block;
+}
+
 .sidebar {
     box-sizing: border-box;
     position: fixed;
-    left: 0;
-    top: 50px;
-    min-height: 100%;
-    bottom: 0;
+    height: 1030px;
     width: 72px;
     padding:0 4px;
     /* margin-top: 4px; */
-    display: inline-block;
-    flex-direction: column;
-    visibility: hidden;
+    visibility: visible;
 }
 
 .sidebar-menu{
-  margin-top: 10px;
+  margin-top: 4px;
 }
 
 .sidebar-button{
@@ -295,12 +294,13 @@ nav#top-bar .nav_container .nav_account{
 }
 
 .contents-page{
+     box-sizing: border-box;
      width: 100%;
      margin-left: 72px;
 }
 
 .contents-top-bar{
-     visibility: hidden;
+     visibility: visible;
      border-top:none;
      border-bottom: none;
      position: fixed;
@@ -341,14 +341,28 @@ nav#top-bar .nav_container .nav_account{
      margin-left: 24px;
 }
 
+.video-page{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sidebar-large{
+    display: none;
+}
+
 .sidebar-large-container{
   width: 240px;
-  border: 1px solid black;
   position: fixed;
-  top: -120px;
+  /* top: -120px;
   right: 0;
   bottom: -120px;
+  left: 0; */
   left: 0;
+  top: 56px;
+  min-height: 100%;
+  bottom: 0;
   text-align: start;
 }
 
@@ -358,17 +372,13 @@ nav#top-bar .nav_container .nav_account{
   top: 0;
   bottom: 0;
   left: 0;
-  padding: 120px 0;
+  padding:0;
 }
 
 #sidebar-large-wrapper{
   height: 100%;
   display: flex;
   flex-direction: column;
-}
-
-#sidebar-large-spacer{
-  margin-top: 56px;
 }
 
 #sidebar-large-content{
@@ -507,6 +517,11 @@ nav#top-bar .nav_container .nav_account{
   border-bottom: 1px solid rgba(0,0,0,0.1);
   width: 240px;
   box-sizing: border-box;
+}
+
+.signin-button:hover{
+  background-color: #def1ff;
+  border-color: #fcfcfc;
 }
 
 #sidebar-large-inner-content{
