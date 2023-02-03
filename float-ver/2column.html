@@ -38,57 +38,254 @@
           <div class="nav_account"><i class="fa-regular fa-circle-user"></i><span class="login">&nbsp로그인</span></div>
       </div>      
     </nav>
-    <div id="sidebar">
-      <h2>사이드바</h2>	
+    <div id="sidebar" class="sidebar" role="navigation">
+      <div class="sidebar-menu">
+          <div class="sidebar-button" id="side-menu">
+              <a class="sidebar-button-a">
+                  <span class="material-symbols-outlined">home</span>
+                  <span class="sidebar-text">홈</span>
+              </a>
+          </div>
+          <div class="sidebar-button" id="side-shorts">
+              <a class="sidebar-button-a">
+                  <span class="material-symbols-outlined">offline_bolt</span>                
+                  <span class="sidebar-text">Shorts</span>
+              </a>
+          </div>
+          <div class="sidebar-button" id="side-subscribe">
+              <a class="sidebar-button-a">
+                  <span class="material-symbols-outlined">subscriptions</span>
+                  <span class="sidebar-text">구독</span>
+              </a>
+          </div>
+          <div class="sidebar-button" id="side-library">
+              <a class="sidebar-button-a">
+                  <span class="material-symbols-outlined">video_library</span>
+                  <span class="sidebar-text">보관함</span>
+              </a>
+          </div>
+          <div class="sidebar-button" id="side-history">
+              <a class="sidebar-button-a">
+                  <span class="material-symbols-outlined">history</span>
+                  <span class="sidebar-text">시청 기록</span>
+              </a>
+          </div>
+      </div>
+  </div>
+    <div id="sidebar-large">
       <div class="sidebar-large-section-container">
         <div class="sidebar-large-section">
-          <a class="section-content-container" title="홈" href="https://www.youtube.com">
-            <div class="section-content">
-                <span class="material-symbols-outlined">home</span>
-                <span class="section-content-text">홈</span>
-            </div>                                
-          </a>
+            <a class="section-content-container" title="홈" href="https://www.youtube.com">
+                <div class="section-content">
+                    <span class="material-symbols-outlined">home</span>
+                    <span class="section-content-text">홈</span>
+                </div>                                
+            </a>
+            <div class="section-interaction"></div>
         </div>
         <div class="sidebar-large-section">
-          <a class="section-content-container" title="홈" href="https://www.youtube.com">
-            <div class="section-content">
-                <span class="material-symbols-outlined">home</span>
-                <span class="section-content-text">홈</span>
-            </div>                                
-          </a>
+            <a class="section-content-container" title="홈" href="https://www.youtube.com/shorts/tLw-zjlvRxk">
+                <div class="section-content">
+                    <span class="material-symbols-outlined" >offline_bolt</span>
+                    <span class="section-content-text">Shorts</span>
+                </div>                                
+            </a>
+            <div class="section-interaction"></div>
         </div>
         <div class="sidebar-large-section">
-          <a class="section-content-container" title="홈" href="https://www.youtube.com">
-            <div class="section-content">
-                <span class="material-symbols-outlined">home</span>
-                <span class="section-content-text">홈</span>
-            </div>                                
-          </a>
+            <a class="section-content-container" title="홈" href="https://www.youtube.com/feed/subscriptions">
+                <div class="section-content">
+                    <span class="material-symbols-outlined">subscriptions</span>
+                    <span class="section-content-text">구독</span>
+                </div>                                
+            </a>
+            <div class="section-interaction"></div>
+        </div>                                
+      </div>
+      <div class="sidebar-large-section-container">
+        <div class="sidebar-large-section">
+            <a class="section-content-container" title="홈" href="https://www.youtube.com/feed/library">
+                <div class="section-content">
+                    <span class="material-symbols-outlined">video_library</span>
+                    <span class="section-content-text">보관함</span>
+                </div>                                
+            </a>
+            <div class="section-interaction"></div>
+        </div>  
+        <div class="sidebar-large-section">
+            <a class="section-content-container" title="홈" href="https://www.youtube.com/feed/history">
+                <div class="section-content">
+                    <span class="material-symbols-outlined">history</span>
+                    <span class="section-content-text">시청 기록</span>
+                </div>                                
+            </a>
+            <div class="section-interaction"></div>
+        </div>                               
+      </div>
+      <div class="sidebar-large-section-signin-container">
+        <span class="section-signin-text">로그인하면 동영상에 좋아요를 표시하고 댓글을 달거나 구독할 수 있습니다.</span>
+        <div class="section-account">
+            <div class="button-shape">
+                <a class="signin-button" href="https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Dko%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252F&hl=ko">
+                    <i class="fa-regular fa-circle-user"></i>                                        
+                    <span class="login">&nbsp로그인</span> 
+                </a>
+            </div>
+        </div>                         
+      </div>
+      <div class="sidebar-large-section-container">
+        <h3 class="sidebar-headline">탐색</h3>
+        <div class="sidebar-large-section">
+            <a class="section-content-container" title="홈" href="https://www.youtube.com/feed/trending?bp=6gQJRkVleHBsb3Jl">
+                <div class="section-content">
+                    <span class="material-symbols-outlined">local_fire_department</span>
+                    <span class="section-content-text">인기 급상승</span>
+                </div>                                
+            </a>
+            <div class="section-interaction"></div>
         </div>
         <div class="sidebar-large-section">
-          <a class="section-content-container" title="홈" href="https://www.youtube.com">
-            <div class="section-content">
-                <span class="material-symbols-outlined">home</span>
-                <span class="section-content-text">홈</span>
-            </div>                                
-          </a>
+            <a class="section-content-container" title="홈" href="https://www.youtube.com/channel/UC-9-kyTW8ZkZNDHQJ6FgpwQ">
+                <div class="section-content">
+                    <span class="material-symbols-outlined">music_note</span>                                          
+                    <span class="section-content-text">음악</span>
+                </div>                                
+            </a>
+            <div class="section-interaction"></div>
+        </div>  
+        <div class="sidebar-large-section">
+            <a class="section-content-container" title="홈" href="https://www.youtube.com/feed/storefront?bp=ogUCKAI%3D">
+                <div class="section-content">
+                    <span class="material-symbols-outlined">movie</span>
+                    <span class="section-content-text">영화</span>
+                </div>                                
+            </a>
+            <div class="section-interaction"></div>
+        </div>  
+        <div class="sidebar-large-section">
+            <a class="section-content-container" title="홈" href="https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig">
+                <div class="section-content">
+                    <span class="material-symbols-outlined">podcasts</span>
+                    <span class="section-content-text">실시간</span>
+                </div>                                
+            </a>
+            <div class="section-interaction"></div>
+        </div>  
+        <div class="sidebar-large-section">
+            <a class="section-content-container" title="홈" href="https://www.youtube.com/gaming">
+                <div class="section-content">
+                    <span class="material-symbols-outlined">sports_esports</span>
+                    <span class="section-content-text">게임</span>
+                </div>                                
+            </a>
+            <div class="section-interaction"></div>
+        </div>  
+        <div class="sidebar-large-section">
+            <a class="section-content-container" title="홈" href="https://www.youtube.com/channel/UCEgdi0XIXXZ-qJOFPf4JSKw">
+                <div class="section-content">
+                    <span class="material-symbols-outlined">sports</span>
+                    <span class="section-content-text">스포츠</span>
+                </div>                                
+            </a>
+            <div class="section-interaction"></div>
+        </div>  
+        <div class="sidebar-large-section">
+            <a class="section-content-container" title="홈" href="https://www.youtube.com/channel/UCtFRv9O2AHqOZjjynzrv-xg">
+                <div class="section-content">
+                    <span class="material-symbols-outlined">lightbulb</span>
+                    <span class="section-content-text">학습</span>
+                </div>                                
+            </a>
+            <div class="section-interaction"></div>
+        </div>                                  
+      </div>
+      <div class="sidebar-large-section-container">
+        <div class="sidebar-large-section">
+            <a class="section-content-container" title="홈" href="https://www.youtube.com/feed/guide_builder">
+                <div class="section-content">
+                    <span class="material-symbols-outlined">add_circle</span>
+                    <span class="section-content-text">채널 탐색</span>
+             </div>                                
+            </a>
+            <div class="section-interaction"></div>
+        </div>                                
+      </div>
+      <div class="sidebar-large-section-container">
+        <h3 class="sidebar-headline">YouTube 더보기</h3>
+        <div class="sidebar-large-section">
+            <a class="section-content-container" title="홈" href="https://www.youtube.com">
+                <div class="section-content">
+                    <i class="fa-brands fa-youtube"></i>
+                    <span class="section-content-text">Youtube Premium</span>
+                </div>                                
+            </a>
+            <div class="section-interaction"></div>
         </div>
         <div class="sidebar-large-section">
-          <a class="section-content-container" title="홈" href="https://www.youtube.com">
-            <div class="section-content">
-                <span class="material-symbols-outlined">home</span>
-                <span class="section-content-text">홈</span>
-            </div>                                
-          </a>
+            <a class="section-content-container" title="홈" href="https://www.youtube.com">
+                <div class="section-content">
+                    <i class="fa-brands fa-youtube"></i>
+                    <span class="section-content-text">Youtube Music</span>
+                </div>                                
+            </a>
+            <div class="section-interaction"></div>
+        </div> 
+        <div class="sidebar-large-section">
+            <a class="section-content-container" title="홈" href="https://www.youtube.com">
+                <div class="section-content">
+                    <i class="fa-brands fa-youtube"></i>
+                    <span class="section-content-text">Youtube Kids</span>
+                </div>                                
+            </a>
+            <div class="section-interaction"></div>
+        </div> 
+        <div class="sidebar-large-section">
+            <a class="section-content-container" title="홈" href="https://www.youtube.com">
+                <div class="section-content">
+                    <i class="fa-brands fa-youtube"></i>
+                    <span class="section-content-text">Youtube TV</span>
+                </div>                                
+            </a>
+            <div class="section-interaction"></div>
+        </div>                                 
+      </div>
+      <div class="sidebar-large-section-container">
+        <div class="sidebar-large-section">
+            <a class="section-content-container" title="홈" href="https://www.youtube.com">
+                <div class="section-content">
+                    <span class="material-symbols-outlined">settings</span>
+                    <span class="section-content-text">설정</span>
+             </div>                                
+            </a>
+            <div class="section-interaction"></div>
         </div>
         <div class="sidebar-large-section">
-          <a class="section-content-container" title="홈" href="https://www.youtube.com">
-            <div class="section-content">
-                <span class="material-symbols-outlined">home</span>
-                <span class="section-content-text">홈</span>
-            </div>                                
-          </a>
-        </div>        
+            <a class="section-content-container" title="홈" href="https://www.youtube.com">
+                <div class="section-content">
+                    <span class="material-symbols-outlined">flag</span>
+                    <span class="section-content-text">신고 기록</span>
+             </div>                                
+            </a>
+            <div class="section-interaction"></div>
+        </div> 
+        <div class="sidebar-large-section">
+            <a class="section-content-container" title="홈" href="https://www.youtube.com">
+                <div class="section-content">
+                    <span class="material-symbols-outlined">help</span>
+                    <span class="section-content-text">고객센터</span>
+             </div>                                
+            </a>
+            <div class="section-interaction"></div>
+        </div> 
+        <div class="sidebar-large-section">
+            <a class="section-content-container" title="홈" href="https://www.youtube.com">
+                <div class="section-content">
+                    <span class="material-symbols-outlined">sms_failed</span>
+                    <span class="section-content-text">의견 보내기</span>
+             </div>                                
+            </a>
+            <div class="section-interaction"></div>
+        </div>                                 
       </div>
       <div id="footer">
         <div class="foot1">
@@ -173,5 +370,8 @@
     </div>
     
   </div>
+
+  <script src="./javascript/script.js"></script>
+
 </body>
 </html>
